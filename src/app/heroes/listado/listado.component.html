@@ -1,0 +1,26 @@
+<p>listado works!</p>
+
+
+
+<div class="main-container">
+    <div class="sub-container">
+        <ul>
+            <li *ngFor="let heroes of heroes; let i = index">
+                
+                {{(i+1) +' '+ heroes }}
+                
+            </li>
+        </ul>
+
+        <div *ngIf="heroes.length + 1 < this.full">
+            <h3>Se borro el siguiente heroe: </h3>
+            <span>{{ this.last }}</span>
+        </div>
+        
+    </div>
+    <div class="bottom-container">
+        <button (click)=borrarHeroe()>Borrar</button>
+    </div>
+</div>
+
+
